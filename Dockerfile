@@ -1,6 +1,8 @@
 # Build stage
 FROM node:lts-alpine as build
 
+RUN npm install parse-server -g
+
 RUN apk update; \
   apk add git;
 WORKDIR /tmp
